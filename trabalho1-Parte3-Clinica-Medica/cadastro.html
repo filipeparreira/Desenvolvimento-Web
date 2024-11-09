@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica ABC Health</title>
+</head>
+<body>
+    <header>
+        <h1><strong>Clínica ABC Health</strong></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1><strong>Formulário de Cadastro</strong></h1>
+        <form action="/cadastroCliente.php" method="post">
+            <label for="nome">Nome: </label><br>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required><br><br>
+
+            <label for="email">Email: </label><br>
+            <input type="email" id="email" name="email" placeholder="Seu email" required><br><br>
+
+            <label for="cpf">CPF:</label><br>
+            <input type="text" id="cpf" name="cpf" 
+                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
+                placeholder="xxx.xxx.xxx-xx" required><br><br>
+            
+            <label for="identidade">Identidade: </label><br>
+            <input type="number" id="identidade" name="identidade" placeholder="Somente números" required><br><br>
+
+            <label for="telefone">Telefone:</label><br>
+            <input type="tel" id="telefone" name="telefone"
+                pattern="\d{2}\\d{5}\-\d{4}"
+                placeholder="(xx)9xxxx-xxxx" required><br><br>
+            
+            <label for="data_nascimento">Data de Nascimento (Opcional):</label><br>
+            <input type="date" id="data_nascimento" name="data_nascimento"><br><br>
+
+            <label for="sexo">Sexo (Opcional):</label><br>
+            <input type="radio" id="masculino" name="sexo" value="masculino">
+            <label for="masculino">Masculino</label><br>
+            <input type="radio" id="feminino" name="sexo" value="feminino">
+            <label for="feminino">Feminino</label><br><br>
+
+            <label for="estado_civil">Estado Civíl (Opcional):</label><br>
+            <input type="radio" id="casado" name="estado_civil" value="casado">
+            <label for="casado">Casado(a)</label><br>
+            <input type="radio" id="solterio" name="estado_civil" value="solteiro">
+            <label for="solteiro">Solteiro(a)</label><br>
+            <input type="radio" id="divorciado" name="estado_civil" value="divorciado">
+            <label for="divorciado">Divorciado(a)</label><br>
+            <input type="radio" id="viuvo" name="estado_civil" value="viuvo">
+            <label for="viuvo">Viúvo(a)</label><br><br>
+
+
+
+        </form>
+    </main>
+
+    <footer>
+        <h3><strong>Contato</strong></h3>
+        <p><img src="imagens/telefone.png" width="30" alt="Ícone de telefone"> 99 99999-9999</p>
+        <p><img src="imagens/endereco.png" width="30" alt="Ícone de endereço"> Rua X, 123 - Bairro Y - Cidade A/ESTADO B</p>
+        <p><img src="imagens/email.png" width="30" alt="Ícone de e-mail"> abcHealth@email.com</p>
+    </footer>
+</body>
+</html>
