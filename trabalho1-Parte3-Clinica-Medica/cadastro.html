@@ -23,37 +23,39 @@
             <fieldset>
                 <legend>Dados Pessoais</legend>
                 <label for="nome">Nome: </label><br>
-                <input type="text" id="nome" name="nome" placeholder="Seu nome" required><br><br>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required autofocus minlength="2" maxlength="50"><br><br>
+
+                <label>Tipo de Usuário:</label><br>
+                <input type="radio" id="cliente" name="tipo_user" value="cliente" checked>
+                <label for="cliente">Cliente</label><br>
+                <input type="radio" id="administrador" name="tipo_user" value="administrador" disabled>
+                <label for="administrador">Administrador</label><br><br>
 
                 <label for="email">Email: </label><br>
                 <input type="email" id="email" name="email" placeholder="Seu email" required><br><br>
 
                 <label for="cpf">CPF:</label><br>
-                <input type="text" id="cpf" name="cpf" 
-                    pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
-                    placeholder="xxx.xxx.xxx-xx" required><br><br>
+                <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="xxx.xxx.xxx-xx" required><br><br>
                 
                 <label for="identidade">Identidade: </label><br>
                 <input type="number" id="identidade" name="identidade" placeholder="Somente números" required><br><br>
 
                 <label for="telefone">Telefone:</label><br>
-                <input type="tel" id="telefone" name="telefone"
-                    pattern="\d{2}\\d{5}\-\d{4}"
-                    placeholder="(xx)9xxxx-xxxx" required><br><br>
+                <input type="tel" id="telefone" name="telefone" pattern="\d{2}\d{5}-\d{4}" placeholder="(xx)9xxxx-xxxx" required><br><br>
                 
                 <label for="data_nascimento">Data de Nascimento (Opcional):</label><br>
                 <input type="date" id="data_nascimento" name="data_nascimento"><br><br>
 
-                <label for="sexo">Sexo (Opcional):</label><br>
+                <label>Sexo (Opcional):</label><br>
                 <input type="radio" id="masculino" name="sexo" value="masculino">
                 <label for="masculino">Masculino</label><br>
                 <input type="radio" id="feminino" name="sexo" value="feminino">
                 <label for="feminino">Feminino</label><br><br>
 
-                <label for="estado_civil">Estado Civíl (Opcional):</label><br>
+                <label>Estado Civil (Opcional):</label><br>
                 <input type="radio" id="casado" name="estado_civil" value="casado">
                 <label for="casado">Casado(a)</label><br>
-                <input type="radio" id="solterio" name="estado_civil" value="solteiro">
+                <input type="radio" id="solteiro" name="estado_civil" value="solteiro">
                 <label for="solteiro">Solteiro(a)</label><br>
                 <input type="radio" id="divorciado" name="estado_civil" value="divorciado">
                 <label for="divorciado">Divorciado(a)</label><br>
@@ -64,79 +66,68 @@
             <fieldset>
                 <legend>Endereço</legend>
                 <label for="cep">CEP:</label><br>
-                <input type="number" id="cep" name="cep"
-                pattern="\d{5}-\d{3}"placeholder="xxxxx-xxx"><br><br>
+                <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" placeholder="xxxxx-xxx"><br><br>
 
-                <label for="logradouro" id="logradouro" name="logradouro">Tipo de Logradouro:</label><br>
-                <input type="radio" id="rua" name="rua" value="rua">
+                <label>Tipo de Logradouro:</label><br>
+                <input type="radio" id="rua" name="logradouro" value="rua">
                 <label for="rua">Rua</label><br>
-                <input type="radio" id="avenida" name="avenida" value="avenida">
+                <input type="radio" id="avenida" name="logradouro" value="avenida">
                 <label for="avenida">Avenida</label><br>
-                <input type="radio" id="praca" name="praca" value="praca">
+                <input type="radio" id="praca" name="logradouro" value="praca">
                 <label for="praca">Praça</label><br>
-                <input type="radio" id="alameda" name="alameda" value="alameda">
+                <input type="radio" id="alameda" name="logradouro" value="alameda">
                 <label for="alameda">Alameda</label><br>
-                <input type="radio" id="estrada" name="estrada" value="estrada">
+                <input type="radio" id="estrada" name="logradouro" value="estrada">
                 <label for="estrada">Estrada</label><br>
-                <input type="radio" id="rodovia" name="rodovia" value="rodovia">
+                <input type="radio" id="rodovia" name="logradouro" value="rodovia">
                 <label for="rodovia">Rodovia</label><br><br>
 
-                <label for="logradouroName" id="logradouroName" name="logradouroName">Logradouro:</label><br>
+                <label for="logradouroName">Logradouro:</label><br>
                 <input type="text" id="logradouroName" name="logradouroName" placeholder="Logradouro"><br><br>
 
-                <label for="bairro" id="bairro" name="bairro">Bairro:</label><br>
+                <label for="bairro">Bairro:</label><br>
                 <input type="text" id="bairro" name="bairro" placeholder="Seu bairro"><br><br>
 
-                <label for="cidade" id="cidade" name="cidade">Cidade:</label><br>
+                <label for="cidade">Cidade:</label><br>
                 <input type="text" id="cidade" name="cidade" placeholder="Sua cidade"><br><br>
                 
-                <label for="estado" id="estado" name="estado">Estado:</label><br>
+                <label for="estado">Estado:</label><br>
                 <input type="text" id="estado" name="estado" placeholder="Seu estado"><br><br>
             </fieldset>
 
             <fieldset>
                 <legend>Informações Adicionais</legend>
-                <label for="interesses" id="interreses" name="interesses">Interesses:</label><br>
+                <label>Interesses:</label><br>
                 <label>
                     <input type="checkbox" name="interesses" value="filmes"> Filmes
                 </label><br>
-                
                 <label>
                     <input type="checkbox" name="interesses" value="informatica"> Informática
                 </label><br>
-                
                 <label>
                     <input type="checkbox" name="interesses" value="games"> Games
                 </label><br>
-                
                 <label>
                     <input type="checkbox" name="interesses" value="livros"> Livros
                 </label><br>
-                
                 <label>
                     <input type="checkbox" name="interesses" value="musica"> Música
                 </label><br>
-                
                 <label>
                     <input type="checkbox" name="interesses" value="viagens"> Viagens
                 </label><br>
-                
                 <label>
                     <input type="checkbox" name="interesses" value="esportes"> Esportes
                 </label><br>
-                
                 <label>
                     <input type="checkbox" name="interesses" value="cozinha"> Cozinha
                 </label><br>
-                
                 <label>
                     <input type="checkbox" name="interesses" value="arte"> Arte
                 </label><br>
-                
                 <label>
                     <input type="checkbox" name="interesses" value="ciencia"> Ciência
                 </label><br>
-                
                 <label>
                     <input type="checkbox" name="interesses" value="tecnologia"> Tecnologia
                 </label><br><br>
@@ -145,10 +136,12 @@
                 <textarea id="complementar" name="informacoes_complementares" rows="5" cols="50" placeholder="Escreva aqui..."></textarea><br><br>
 
                 <label for="imagem">Adicione uma imagem:</label>
-            <input type="file" id="imagem" name="imagem" accept="image/*">
+                <input type="file" id="imagem" name="imagem" accept="image/*"><br><br>
 
             </fieldset>
-
+            <input type="hidden" name="tipo_de_form" value="cadastroCliente">
+            <br>
+            <button type="submit">Enviar Cadastro</button>
         </form>
     </main>
 
