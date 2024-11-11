@@ -56,15 +56,16 @@ footer h3 {
     margin-bottom: 15px;
 }
 
-footer p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0;
-}
+button { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 5px; 
+} 
 
-footer p img {
-    margin-right: 10px;
-    vertical-align: middle;
+
+button img { 
+    height: 16px; 
+    margin-right: 5px; 
 }
 
