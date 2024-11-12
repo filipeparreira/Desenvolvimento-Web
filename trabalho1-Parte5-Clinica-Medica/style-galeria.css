@@ -13,7 +13,6 @@ h1, main, footer, nav ul {
     padding: 20px;
 }
 
-
 h1 {
     background-color: #444;
     color: #ddd;
@@ -55,15 +54,27 @@ main h2 {
     margin-bottom: 10px;
 }
 
-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 10px;
+.container-imagens {
+    text-align: left;
 }
 
-table img {
-    width: 150px;
-    height: 150px;
+.container-imagens h2 {
+    color: #444;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.image-container img {
+    max-width: 150px;
+    height: auto;
+    margin: 10px;
+    box-sizing: border-box;
     border-radius: 5px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
@@ -89,12 +100,13 @@ footer p img {
     margin-right: 10px;
 }
 
-button { 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    gap: 5px; 
-}
-button img {
-    margin-right: 5px;
+@media only screen and (max-width: 600px) {
+    main, footer, h1, nav ul {
+        width: 100%;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        margin: 10px 0;
+    }
 }
