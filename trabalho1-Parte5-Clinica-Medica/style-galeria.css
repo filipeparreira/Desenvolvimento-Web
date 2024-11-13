@@ -67,12 +67,14 @@ main h2 {
 .image-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .image-container img {
-    max-width: 150px;
-    height: auto;
+    display: flex;
+    height: 30vh;
     margin: 10px;
     box-sizing: border-box;
     border-radius: 5px;
